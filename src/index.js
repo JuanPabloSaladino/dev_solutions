@@ -5,6 +5,9 @@ const path = require('path');
 
 const app = express();
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
 //Settings
 app.set('port', 3000);
 app.set('views', path.join(__dirname, 'views'));
